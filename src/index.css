@@ -1,0 +1,79 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-surface: #0f131e;
+  --color-background: #0f131e;
+  --color-surface-base: #131722;
+  --color-surface-container-lowest: #0a0e19;
+  --color-surface-container-low: #171b26;
+  --color-surface-container: #1b1f2b;
+  --color-surface-elevated: #1e222d;
+  --color-surface-container-high: #262a35;
+  --color-surface-panel: #2a2e39;
+  --color-surface-container-highest: #313441;
+  --color-surface-bright: #353945;
+  --color-surface-hover: #363a45;
+  --color-border-subtle: #2a2e39;
+  --color-border-prominent: #363a45;
+
+  --color-text-primary: #f0f3fa;
+  --color-on-surface: #dfe2f2;
+  --color-on-surface-variant: #c3c5d8;
+  --color-text-secondary: #787b86;
+  --color-text-muted: #50535e;
+
+  --color-brand-blue: #2962ff;
+  --color-primary: #b6c4ff;
+  --color-primary-fixed-dim: #b6c4ff;
+  --color-on-primary: #002780;
+  --color-bullish-green: #089981;
+  --color-bullish-green-subtle: #26a69a;
+  --color-bearish-red: #f23645;
+  --color-secondary: #66dabf;
+  --color-secondary-fixed: #84f7db;
+  --color-tertiary: #ffb3b0;
+  --color-tertiary-container: #da2237;
+
+  --font-display: "Plus Jakarta Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-sans: "DM Sans", -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+}
+
+@layer base {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    background-color: #0f131e;
+    color: #dfe2f2;
+    font-family: var(--font-sans);
+    overscroll-behavior: none;
+  }
+
+  .tabular-nums {
+    font-variant-numeric: tabular-nums;
+  }
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.pb-safe {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+.pt-safe {
+  padding-top: env(safe-area-inset-top, 0px);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+  }
+}

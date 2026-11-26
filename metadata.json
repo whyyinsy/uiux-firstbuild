@@ -1,0 +1,6 @@
+{
+  "name": "PulseMarkets — Financial Markets & Supercharts",
+  "description": "Real-time multi-asset markets terminal featuring global indices, US stocks movers, crypto pulse, futures, economic calendar, watchlist, and interactive candlestick supercharts.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
